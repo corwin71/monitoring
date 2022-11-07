@@ -31,4 +31,4 @@ if delta_cert_time > 100:
 
 
 
-os.system("echo Hello from the other side!")
+os.system("echo Hello !")
