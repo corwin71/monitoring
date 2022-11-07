@@ -3,7 +3,7 @@ import socket
 import datetime
 import os
 
-sitename = "profstomtula.ru"
+domainname = "voffka.com"
 
 def ssl_expiry_datetime(host, port=443):
     ssl_date_fmt = r'%b %d %H:%M:%S %Y %Z'
@@ -21,14 +21,15 @@ def ssl_expiry_datetime(host, port=443):
     return res
 
 
-delta_cert_time = (ssl_expiry_datetime(sitename) - datetime.datetime.now()).days
+delta_cert_time = (ssl_expiry_datetime(domainname) - datetime.datetime.now()).days
 
 print(delta_cert_time)
 
 
 if delta_cert_time > 100:
+    os.system("echo Hello !")
+else:
     print ("warning")
 
 
 
-os.system("echo Hello !")
